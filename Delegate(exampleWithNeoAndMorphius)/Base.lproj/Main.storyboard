@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Matrixx-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Delegate_exampleWithNeoAndMorphius_" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                             <constraint firstItem="CoG-4M-qwr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="sxH-gJ-hZg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="i6Z-hT-nsP"/>
+                    <navigationItem key="navigationItem" title="Matrixx" id="i6Z-hT-nsP"/>
                     <connections>
                         <outlet property="chooseApill" destination="TTM-wP-Pz2" id="0iE-UT-ylm"/>
                         <outlet property="imageFirstVC" destination="40o-Td-VrJ" id="4dc-S5-g1b"/>
@@ -122,6 +122,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W3A-J0-jAj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.035082925110000003" green="0.57287740710000001" blue="0.15052819249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.035082925110000003" green="0.57287740710000001" blue="0.15052819249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
