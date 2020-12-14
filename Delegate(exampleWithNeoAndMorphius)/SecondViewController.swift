@@ -8,22 +8,43 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    var delegate : MatrixxDelegate?
+    
+    
+    @IBOutlet weak var redButton: UIButton!
+    @IBOutlet weak var blueButton: UIButton!
+    
+    private let trueText = "Вы узнали истину"
+    private let falseText = "Вы живете в иллюзии"
+    
+   private let neoPicture = UIImage(named:"neo")
+   private let agentSmithPicture = UIImage(named: "agentSmith")
+    
+    @IBAction func redPiple(_ sender: UIButton) {
+        self.delegate?.updatePictureAndLabel(text: falseText, picture: agentSmithPicture)
+        navigationController?.popViewController(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func bluePiple(_ sender: UIButton) {
+        self.delegate?.updatePictureAndLabel(text: trueText, picture:neoPicture)
+        navigationController?.popViewController(animated: true)
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup(button: redButton)
+        setup(button: blueButton)
+     
+    }
+    
+    func setup(button: UIButton) {
+        button.layer.cornerRadius = 50
+        button.layer.borderWidth = 10
+        button.layer.borderColor = UIColor.clear.cgColor
+    }
+    
+    
+    
 
 }
